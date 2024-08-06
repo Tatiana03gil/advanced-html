@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .center {
@@ -25,7 +30,7 @@
 .header__left {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
   gap: 41px;
 }
 .header__right {
@@ -50,7 +55,7 @@
   opacity: 0;
   height: 0;
   position: absolute;
-  top: 75px;
+  top: 78px;
   right: 0;
 }
 .list__box {
@@ -277,6 +282,7 @@
 .product__img {
   position: relative;
   z-index: 1;
+  min-height: 420px;
 }
 .product__img:hover .product__img {
   opacity: 0.14;
@@ -299,6 +305,10 @@
   align-items: center;
   justify-content: space-between;
   gap: 4px;
+}
+
+.pink-back {
+  background-color: #f7e4e2;
 }
 
 .advantage {
@@ -632,6 +642,173 @@
 
 .indent {
   top: 535px;
+}
+
+.sort-box {
+  padding-top: 51px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 390px;
+  justify-content: flex-start;
+}
+
+.filter_sort {
+  position: relative;
+}
+
+.filter {
+  width: 360px;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 13px 16px 16px;
+  top: -16px;
+  z-index: 10;
+}
+.filter[open] {
+  background: #ffffff;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.filter[open] .filter__heading {
+  color: #f16d7f;
+}
+.filter[open] path {
+  fill: #f16d7f;
+}
+.filter__summary {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  list-style-type: none;
+}
+.filter__summary::-webkit-details-marker {
+  display: none;
+}
+.filter__heading {
+  color: #000;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.filter__content {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.filter__head {
+  list-style-type: none;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  border-left: 5px solid #f16d7f;
+  border-bottom: 1px solid #ebebeb;
+  color: #6f6e6e;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.filter__link-box {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 12px 24px;
+  color: #6f6e6e;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.filter__head::-webkit-details-marker {
+  display: none;
+}
+
+.sort {
+  display: flex;
+  gap: 28px;
+}
+.sort__summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6f6e6e;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.sort__details {
+  position: relative;
+}
+.sort__box {
+  position: absolute;
+  top: 22px;
+  left: -9px;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  padding-left: 7px;
+  width: 80px;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.sort__check {
+  color: #6f6e6e;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.nav_center {
+  padding-bottom: 96px;
+  padding-left: calc(50% - 142px);
+  padding-right: calc(50% - 142px);
+}
+
+.page {
+  padding: 16px 15px;
+  border: 1px solid #ebebeb;
+  border-radius: 1px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.page__links {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+.page__num {
+  color: #c4c4c4;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.page__num__colored {
+  color: #f16d7f;
+}
+.page__more {
+  display: flex;
+  color: #c4c4c4;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 @media (max-width: 1024px) {

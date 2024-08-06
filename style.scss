@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto&display=swap");
+
 $backHeadColor: #222;
 $iconColor: #e8e8e8;
 $themeColor: #f16d7f;
@@ -12,6 +14,9 @@ $indentGap: 535px;
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
 .center {
   padding-left: calc(50% - 1140px / 2);
   padding-right: calc(50% - 1140px / 2);
@@ -33,7 +38,7 @@ $indentGap: 535px;
   &__left {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     gap: 41px;
   }
 
@@ -60,7 +65,7 @@ $indentGap: 535px;
   opacity: 0;
   height: 0;
   position: absolute;
-  top: 75px;
+  top: 78px;
   right: 0;
 
   &__box {
@@ -312,6 +317,7 @@ $indentGap: 535px;
   &__img {
     position: relative;
     z-index: 1;
+    min-height: 420px;
   }
 
   &__img:hover .product__img {
@@ -337,6 +343,10 @@ $indentGap: 535px;
     justify-content: space-between;
     gap: 4px;
   }
+}
+
+.pink-back {
+  background-color: #f7e4e2;
 }
 
 .advantage {
@@ -699,6 +709,193 @@ $indentGap: 535px;
 
 .indent {
   top: $indentGap;
+}
+
+// catalog page
+
+.sort-box {
+  padding-top: 51px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 390px;
+  justify-content: flex-start;
+}
+
+.filter_sort {
+  position: relative;
+}
+
+.filter {
+  width: 360px;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 13px 16px 16px;
+  top: -16px;
+  z-index: 10;
+
+  &[open] {
+    background: #ffffff;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  }
+
+  &[open] .filter__heading {
+    color: $themeColor;
+  }
+
+  &[open] path {
+    fill: $themeColor;
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    list-style-type: none;
+  }
+
+  &__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  &__heading {
+    color: #000;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__content {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__head {
+    list-style-type: none;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    padding-left: 8px;
+    border-left: 5px solid $themeColor;
+    border-bottom: 1px solid #ebebeb;
+    color: #6f6e6e;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__link-box {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding: 12px 24px;
+    color: #6f6e6e;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__head::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.sort {
+  display: flex;
+  gap: 28px;
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6f6e6e;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__details {
+    position: relative;
+  }
+
+  &__box {
+    position: absolute;
+    top: 22px;
+    left: -9px;
+    padding-top: 9px;
+    padding-bottom: 11px;
+    padding-left: 7px;
+    width: 80px;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 6px 4px 35px 0px rgb(0 0 0 / 21%);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  &__check {
+    color: #6f6e6e;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.nav_center {
+  padding-bottom: 96px;
+  padding-left: calc(50% - 284px / 2);
+  padding-right: calc(50% - 284px / 2);
+}
+
+.page {
+  padding: 16px 15px;
+  border: 1px solid #ebebeb;
+  border-radius: 1px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+  }
+
+  &__num {
+    color: #c4c4c4;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    &__colored {
+      color: $themeColor;
+    }
+  }
+
+  &__more {
+    display: flex;
+    color: #c4c4c4;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
 }
 
 @media (max-width: 1024px) {
