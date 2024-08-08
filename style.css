@@ -242,21 +242,17 @@ a {
 .products__item {
   background: #f8f8f8;
 }
-.products__item__item:hover .product__item__img {
-  opacity: 0.14;
-  transition: 0.3s;
-}
-.products__item__img {
+.products__img {
   position: relative;
   display: block;
 }
-.products__item__info {
+.products__info {
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 24px;
   padding-bottom: 24px;
 }
-.products__item__info__title {
+.products__info__title {
   color: #000;
   font-family: Lato;
   font-size: 13px;
@@ -264,7 +260,7 @@ a {
   font-weight: 400;
   line-height: normal;
 }
-.products__item__info__text {
+.products__info__text {
   color: #5d5d5d;
   font-family: Lato;
   font-size: 14px;
@@ -275,7 +271,7 @@ a {
   margin-top: 16px;
   margin-bottom: 16px;
 }
-.products__item__info__price {
+.products__info__price {
   color: #f16d7f;
   font-family: Lato;
   font-size: 16px;
@@ -318,14 +314,6 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 4px;
-}
-
-.pink-back {
-  background-color: #f7e4e2;
-}
-
-.pink-back:hover {
-  background-color: rgb(58, 56, 56);
 }
 
 .advantage {
@@ -519,13 +507,32 @@ a {
   font-weight: 400;
   line-height: normal;
 }
-.upper__breadcrumbs {
+
+.breadcrumbs {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.breadcrumbs__link a {
   color: #636363;
   font-family: Lato;
   font-size: 14px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: normal;
+  margin-right: 8px;
+}
+.breadcrumbs__link a:hover {
+  color: #f16d7f;
+}
+.breadcrumbs__link:not(:last-child)::after {
+  content: "/";
+  margin-right: 8px;
+}
+.breadcrumbs__link:last-child a {
+  color: #f16d7f;
 }
 
 .arrival__image {
@@ -1002,7 +1009,7 @@ a {
   width: 326px;
   padding: 13px 17px 16px;
   border: 1px solid #a4a4a4;
-  color: #B1B1B1;
+  color: #b1b1b1;
   font-family: Lato;
   font-size: 13px;
   font-style: normal;
@@ -1029,6 +1036,146 @@ a {
   border: 1px solid #eaeaea;
   display: flex;
   justify-content: center;
+}
+
+.registration {
+  padding-top: 64px;
+  padding-bottom: 96px;
+  display: flex;
+  justify-content: space-between;
+}
+.registration__box {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  align-items: flex-start;
+}
+.registration__field-name {
+  color: #222;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.registration__input {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+}
+.registration__field {
+  width: 326px;
+  padding: 13px 17px 16px;
+  border: 1px solid #a4a4a4;
+  color: #222;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.registration__field::-moz-placeholder {
+  color: #b1b1b1;
+}
+.registration__field:-ms-input-placeholder {
+  color: #b1b1b1;
+}
+.registration__field::placeholder {
+  color: #b1b1b1;
+}
+.registration__sex-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 33px;
+  margin-bottom: 35px;
+}
+.registration__sex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.registration__sex-label {
+  color: #000;
+  font-family: Lato;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.registration__sex-field {
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #a4a4a4;
+}
+.registration__input-proviso {
+  color: #b1b1b1;
+  font-family: Lato;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 15px;
+  margin-bottom: 39px;
+}
+.registration__button {
+  color: #fff;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  background: #f16d7f;
+  padding: 16px 29px;
+}
+.registration__button svg {
+  margin-left: 20px;
+}
+
+.perks {
+  width: 652px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 21px;
+}
+.perks__title {
+  color: #000;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.perks__text {
+  color: #000;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.perks__list {
+  color: #000;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 20px;
+  list-style-image: url(img/Vector.svg);
+  list-style-position: outside;
+}
+.perks__point {
+  padding-left: 22px;
 }
 
 @media (max-width: 1024px) {
