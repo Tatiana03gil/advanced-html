@@ -242,17 +242,13 @@ a {
 .products__item {
   background: #f8f8f8;
 }
-.products__img {
-  position: relative;
-  display: block;
-}
-.products__info {
+.products__item__info {
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 24px;
   padding-bottom: 24px;
 }
-.products__info__title {
+.products__item__info__title {
   color: #000;
   font-family: Lato;
   font-size: 13px;
@@ -260,7 +256,7 @@ a {
   font-weight: 400;
   line-height: normal;
 }
-.products__info__text {
+.products__item__info__text {
   color: #5d5d5d;
   font-family: Lato;
   font-size: 14px;
@@ -271,13 +267,17 @@ a {
   margin-top: 16px;
   margin-bottom: 16px;
 }
-.products__info__price {
+.products__item__info__price {
   color: #f16d7f;
   font-family: Lato;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.products__item__img {
+  position: relative;
+  display: block;
 }
 
 .product {
@@ -1173,6 +1173,9 @@ a {
   padding-left: 20px;
   list-style-image: url(img/Vector.svg);
   list-style-position: outside;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
 }
 .perks__point {
   padding-left: 22px;
@@ -1245,6 +1248,90 @@ a {
     gap: 78px;
     padding-top: 64px;
     padding-bottom: 140px;
+  }
+  .breadcrumbs__link a {
+    font-weight: 300;
+  }
+  .sort-box {
+    padding-top: 24px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .catalog-products {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+  .hidden-laptop {
+    display: none;
+  }
+  .nav_center {
+    padding-bottom: 63px;
+  }
+  .arrival__info {
+    position: relative;
+    top: auto;
+    left: 0;
+    right: 0;
+    padding-left: calc(50% - 320px);
+    padding-right: calc(50% - 320px);
+    border: none;
+    padding-bottom: 65px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  .items {
+    position: relative;
+    top: 0;
+    padding-top: 130px;
+    padding-bottom: 96px;
+  }
+  .indent {
+    top: 0;
+  }
+  .cart {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+  }
+  .cart__order {
+    width: 734px;
+  }
+  .cart__item__top {
+    gap: 137px;
+  }
+  .cart__buttons {
+    margin-top: 62px;
+    margin-bottom: 64px;
+    gap: 48px;
+  }
+  .cart__info {
+    flex-direction: row;
+    max-width: 734px;
+    gap: 15px;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .registration {
+    padding-top: 40px;
+    gap: 22px;
+  }
+  .perks {
+    width: 354px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+  .perks__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .perks__text {
+    font-size: 16px;
+  }
+  .perks__list {
+    font-size: 16px;
   }
 }
 @media (max-width: 767px) {
