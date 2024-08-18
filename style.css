@@ -1278,6 +1278,7 @@ a {
     border: none;
     padding-bottom: 65px;
     border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
   }
   .items {
     position: relative;
@@ -1315,6 +1316,9 @@ a {
   .registration {
     padding-top: 40px;
     gap: 22px;
+  }
+  .registration__field {
+    max-width: 360px;
   }
   .perks {
     width: 354px;
@@ -1404,12 +1408,167 @@ a {
     padding-top: 64px;
     padding-bottom: 110px;
   }
+  .email__form {
+    display: flex;
+  }
+  .email__form__input {
+    width: 163px;
+    height: 35px;
+    padding-right: 61px;
+  }
+  .email__form__push {
+    width: 96px;
+    height: 47px;
+  }
   .footer {
     padding-top: 43px;
     padding-bottom: 9px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    gap: 40px;
+  }
+  .upper {
+    padding-top: 24px;
+    padding-bottom: 46px;
+    flex-direction: column;
+    align-content: center;
+    gap: 32px;
+  }
+  .breadcrumbs {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+  .breadcrumbs__link a {
+    margin-right: 4px;
+  }
+  .breadcrumbs__link:not(:last-child)::after {
+    content: "/";
+    margin-right: 4px;
+  }
+  .sort-box {
+    padding-top: 24px;
+    padding-bottom: 57px;
+    position: relative;
+  }
+  .filter {
+    left: -16px;
+  }
+  .sort {
+    position: absolute;
+    top: 26px;
+    gap: 24px;
+    right: calc(50% - 171px);
+  }
+  .sort__summary {
+    font-size: 12px;
+  }
+  .filter__summary svg {
+    width: 37.5px;
+    height: 25px;
+  }
+  .catalog-products {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+  .arrival__image__photo {
+    margin-bottom: 85px;
+    margin-top: 85px;
+    max-width: 266px;
+  }
+  .arrival__info__description {
+    max-width: 326px;
+  }
+  .arrival__info__price {
+    margin-bottom: 31px;
+  }
+  .choose {
+    margin-top: 50px;
+    margin-bottom: 64px;
+  }
+  .choose__button {
+    font-size: 10px;
+  }
+  .items {
+    padding-top: 0px;
+    padding-bottom: 32px;
+  }
+  .hidden-laptop {
+    display: block;
+  }
+  .hidden-mobile {
+    display: none;
+  }
+  .upper-cart {
+    align-items: center;
+    gap: 0;
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+  .cart {
+    padding-top: 40px;
+    padding-bottom: 96px;
+  }
+  .cart__order {
+    width: 360px;
+    gap: 32px;
+  }
+  .cart__img {
+    max-width: 144px;
+  }
+  .cart__describtion {
+    padding: 13px 12px 38px 17px;
+  }
+  .cart__item__top {
+    gap: 31px;
+  }
+  .cart__item-name {
+    width: 144px;
+    font-size: 16px;
+    margin-bottom: 26px;
+  }
+  .cart__item-close {
+    margin-top: 4px;
+    width: 9.883px;
+  }
+  .cart__details {
+    gap: 4px;
+    font-size: 14px;
+  }
+  .cart__buttons {
+    margin-top: 30px;
+    margin-bottom: 48px;
+    gap: 9px;
+  }
+  .cart__button {
+    font-size: 12px;
+    padding: 9px;
+    width: 175px;
+  }
+  .cart__info {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .cart__adress {
+    margin-top: 0px;
+  }
+  .block {
+    width: 24px;
+    height: 15px;
+    font-size: 10px;
+  }
+  .upper-registration {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 0;
+  }
+  .registration {
+    display: flex;
+    flex-direction: column;
     gap: 40px;
   }
 }/*# sourceMappingURL=style.css.map */
